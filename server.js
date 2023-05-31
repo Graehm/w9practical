@@ -1,12 +1,12 @@
-const express = require('express');
+const express = require('express')
 
-const app = express();
+const app = express()
 
 app.get('/', (req, res) => {
-    res.send('<h1>Hello Express</h1>');
-  });
-
-
-app.listen(3000, function () {
-    console.log('Listening on port 3000')
+    res.send('Hello Stranger')
 })
+
+app.listen(3000, () =>{
+    console.log('Yes, I am listening on port 3000')
+})
+
