@@ -1,9 +1,10 @@
 const express = require('express');
+
 const app = express();
 
-app.get('/greeting/:name', function (req, res) {
-    res.send('<h1>hello stranger!</h1>')
-})
+app.get('/', (req, res) => {
+    res.send('<h1>Hello Express</h1>');
+  });
 
 
 app.listen(3000, function () {
