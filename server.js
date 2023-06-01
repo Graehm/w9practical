@@ -6,10 +6,11 @@ app.get('/', (req, res) => {
     res.send('<h1>Hello Stranger</h1>')
 })
 app.get('/greeting/:name', (req, res) => {
-    res.send(req.name); 
+    console.log(req.params)
+    res.send(req.params.name); 
     res.send(`Hello there, ${'name'}`);
 })
-app.get('/tip', (req, res) =>{
+app.get('/tip', (req, res) => {
     res.send(total, tipPercentage)
 })
 
@@ -21,7 +22,9 @@ app.get('/magic', (req, res) => {
 app.get('/fibonacci', (req, res) => {
 
 })
+// app.get('/:routeName', async (req, res) => {
 
+// })
 
 app.listen(3000, () =>{
     console.log('Yes, I am listening on port 3000')
